@@ -1,28 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bcerit <bcerit@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/15 19:13:31 by bcerit            #+#    #+#             */
-/*   Updated: 2022/10/15 20:19:26 by bcerit           ###   ########.fr       */
+/*   Created: 2022/10/15 20:31:03 by bcerit            #+#    #+#             */
+/*   Updated: 2022/10/15 20:40:04 by bcerit           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    ft_putchar_fd(char c, int fd)
+void    ft_putnbr_fd(int n, int fd)
 {
-    write(fd, &c, 1);
+    if (n == -2147483648)
+        write(fd, "-2147483648", 11);
+    else if (n < 0)
+    {
+        n = -n;
+        write(fd, "-", 1);
+        ft_putnbr_fd(n, fd);
+    }
+    else
+    {
+        if (n > 9)
+            ft_putnbr_fd(n / 10, fd);
+        ft_putchar_fd(n % 10 + 48, fd);
+    }
 }
-/*
-** #include <fcntl.h>
-** #include <stdio.h>
-** int main()
-** {
-**    int fd = open("text.txt", O_WRONLY);
-**    ft_putchar_fd('c', fd);
-**    printf("%d", fd);
-** }
-*/

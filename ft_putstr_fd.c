@@ -1,28 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bcerit <bcerit@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/15 19:13:31 by bcerit            #+#    #+#             */
-/*   Updated: 2022/10/15 20:19:26 by bcerit           ###   ########.fr       */
+/*   Created: 2022/10/15 20:22:31 by bcerit            #+#    #+#             */
+/*   Updated: 2022/10/15 20:23:43 by bcerit           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    ft_putchar_fd(char c, int fd)
+void    ft_putstr_fd(char *s, int fd)
 {
-    write(fd, &c, 1);
+    if (!s)
+        return ;
+    write(fd, s, ft_strlen(s));
 }
-/*
-** #include <fcntl.h>
-** #include <stdio.h>
-** int main()
-** {
-**    int fd = open("text.txt", O_WRONLY);
-**    ft_putchar_fd('c', fd);
-**    printf("%d", fd);
-** }
-*/
