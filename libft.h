@@ -6,7 +6,7 @@
 /*   By: bcerit <bcerit@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 16:14:43 by bcerit            #+#    #+#             */
-/*   Updated: 2022/10/07 16:17:31 by bcerit           ###   ########.fr       */
+/*   Updated: 2022/10/16 16:12:22 by bcerit           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,12 @@
 
 #include <unistd.h>
 #include <stdlib.h>
-#include <limits.h>
-#include <stdio.h>
 
-#define BUFFER_SIZE 1
+typedef struct s_list
+{
+    void    *content;
+    struct s_list   *next;
+} t_list;
 
 int ft_isalpha(int c);
 int ft_isdigit(int c);
