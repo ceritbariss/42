@@ -6,8 +6,13 @@
 /*   By: bcerit <bcerit@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/15 14:00:50 by bcerit            #+#    #+#             */
-/*   Updated: 2022/10/21 15:52:32 by bcerit           ###   ########.fr       */
+/*   Updated: 2022/10/21 16:40:46 by bcerit           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+char	*ft_strtrim(char const *s1, char const *set)
+{
+	
+}
