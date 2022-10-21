@@ -6,11 +6,13 @@
 /*   By: bcerit <bcerit@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 12:22:53 by bcerit            #+#    #+#             */
-/*   Updated: 2022/10/07 12:51:55 by bcerit           ###   ########.fr       */
+/*   Updated: 2022/10/21 13:35:49 by bcerit           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isalnum(int c)
+#include "libft.h"
+
+int	ft_isalnum(int c)
 {
-    return(ft_isdigit(c) || ft_isalpha(c));
+	return (ft_isdigit(c) || ft_isalpha(c));
 }

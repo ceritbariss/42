@@ -1,18 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bcerit <bcerit@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/21 13:17:03 by bcerit            #+#    #+#             */
-/*   Updated: 2022/10/21 15:50:38 by bcerit           ###   ########.fr       */
+/*   Created: 2022/10/21 10:29:07 by bcerit            #+#    #+#             */
+/*   Updated: 2022/10/21 15:44:40 by bcerit           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t len)
+t_list	*ft_lstlast(t_list *lst)
 {
-	ft_memset(s, '\0', len);
+	if (!lst)
+		return (0);
+	while (lst -> next != '\0')
+	{
+		lst = lst -> next;
+	}
+	return (lst);
 }

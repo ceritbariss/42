@@ -6,15 +6,17 @@
 /*   By: bcerit <bcerit@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 12:17:54 by bcerit            #+#    #+#             */
-/*   Updated: 2022/10/07 12:21:31 by bcerit           ###   ########.fr       */
+/*   Updated: 2022/10/21 13:37:09 by bcerit           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isdigit(int c)
+#include "libft.h"
+
+int	ft_isdigit(int c)
 {
-    if (c >= '0' && c <= '9')
-    {
-        return(1);
-    }
-    return(0);
+	if (c >= '0' && c <= '9')
+	{
+		return (1);
+	}
+	return (0);
 }

@@ -6,15 +6,17 @@
 /*   By: bcerit <bcerit@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 13:16:44 by bcerit            #+#    #+#             */
-/*   Updated: 2022/10/07 14:13:03 by bcerit           ###   ########.fr       */
+/*   Updated: 2022/10/21 13:39:33 by bcerit           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isprint(int c)
+#include "libft.h"
+
+int	ft_isprint(int c)
 {
-    if (c >= 32 && c <= 126)
-    {
-        return(1);
-    }
-    return(0); 
+	if (c >= 32 && c <= 126)
+	{
+		return (1);
+	}
+	return (0);
 }
