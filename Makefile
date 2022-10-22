@@ -49,6 +49,7 @@ SRC_PART1 = \
 	./ft_tolower.c
 	
 SRC_PART2 = \
+	./ft_striteri.c \
 	./ft_substr.c	\
 	./ft_strjoin.c	\
 	./ft_strtrim.c	\

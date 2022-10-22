@@ -6,7 +6,7 @@
 /*   By: bcerit <bcerit@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/21 10:23:28 by bcerit            #+#    #+#             */
-/*   Updated: 2022/10/21 15:44:07 by bcerit           ###   ########.fr       */
+/*   Updated: 2022/10/22 17:19:10 by bcerit           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_lstsize(t_list *lst)
 	size_t	i;
 
 	i = 0;
-	while (lst != '\0')
+	while (lst != NULL)
 	{
 		lst = lst->next;
 		i++;
