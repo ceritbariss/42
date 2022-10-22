@@ -6,7 +6,7 @@
 /*   By: bcerit <bcerit@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/15 12:59:43 by bcerit            #+#    #+#             */
-/*   Updated: 2022/10/21 15:35:06 by bcerit           ###   ########.fr       */
+/*   Updated: 2022/10/22 14:58:03 by bcerit           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,18 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	if (!s1 || !s2 || !new_s)
 		return (0);
 	i = 0;
-	while (s1 != '\0')
-		new_s[i++] = s1[i++];
+	while (s1 != NULL)
+	{
+		new_s[i] = s1[i];
+		i++;
+	}
 	j = 0;
-	while (s2 != '\0')
-		new_s[i++] = s2[j++];
+	while (s2 != NULL)
+	{
+		new_s[i] = s2[j];
+		i++;
+		j++;
+	}
 	new_s[i] = '\0';
 	return (new_s);
 }

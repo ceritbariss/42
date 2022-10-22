@@ -6,7 +6,7 @@
 /*   By: bcerit <bcerit@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 15:43:04 by bcerit            #+#    #+#             */
-/*   Updated: 2022/10/21 14:02:50 by bcerit           ###   ########.fr       */
+/*   Updated: 2022/10/22 15:22:12 by bcerit           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	unsigned int	i;
+	int	i;
 
 	i = ft_strlen(s);
 	while (i >= 0)
 	{
 		if (s[i] == (char)c)
-			return ((char *)s + 1);
+			return ((char *)s + i);
 		i--;
 	}
-	return (NULL);
+	return (0);
 }
