@@ -6,11 +6,67 @@
 /*   By: bcerit <bcerit@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 18:48:13 by bcerit            #+#    #+#             */
-/*   Updated: 2022/12/12 19:09:28 by bcerit           ###   ########.fr       */
+/*   Updated: 2023/01/16 15:27:14 by bcerit           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
+//#include <stdio.h>
+//#include <fcntl.h>
+
+static char	*left_str(char *line, char c)
+{
+	char	*str;
+	int		i;
+	int		j;
+
+	i = 0;
+	j = 0;
+	while (line[i] != '\0' && line[i] != c)
+		i++;
+	if (!line[i])
+	{
+		free(line);
+		return (NULL);
+	}
+	str = (char *)malloc((ft_strlen(line) - i));
+	if (!str)
+		return (NULL);
+	i++;
+	while (line[i] != '\0')
+		str[j++] = line[i++];
+	str[j] = '\0';
+	free(line);
+	return (str);
+}
+
+static char	*new_line(char *line, char c)
+{
+	char	*str;
+	int		i;
+
+	i = 0;
+	if (!line[i])
+		return (NULL);
+	while (line[i] != '\0' && line[i] != c)
+		i++;
+	str = (char *)malloc(sizeof(char) * (i + 2));
+	if (!str)
+		return (NULL);
+	i = 0;
+	while (line[i] != '\0' && line[i] != c)
+	{
+		str[i] = line[i];
+		i++;
+	}
+	if (line[i] == c)
+	{
+		str[i] = line[i];
+		i++;
+	}
+	str[i] = '\0';
+	return (str);
+}
 
 static char	*read_line(int fd, char *line)
 {
@@ -52,3 +108,22 @@ char	*get_next_line(int fd)
 	}
 	return (NULL);
 }
+
+/* int	main(void)
+{
+	int	k;
+	int	j;
+	int	i;
+
+	k = open(".o", O_RDONLY);
+	j = open(".o_2", O_RDONLY);
+	i = 0;
+	while (i < 1)
+	{
+		printf("%s", get_next_line(k));
+		printf("%s", get_next_line(j));
+		i++;
+	}
+	close(k);
+	close(j);
+} */
