@@ -6,7 +6,7 @@
 /*   By: bcerit <bcerit@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 18:48:13 by bcerit            #+#    #+#             */
-/*   Updated: 2023/01/16 15:27:14 by bcerit           ###   ########.fr       */
+/*   Updated: 2023/01/30 14:59:31 by bcerit           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,21 +109,20 @@ char	*get_next_line(int fd)
 	return (NULL);
 }
 
-/* int	main(void)
-{
-	int	k;
-	int	j;
-	int	i;
-
-	k = open(".o", O_RDONLY);
-	j = open(".o_2", O_RDONLY);
-	i = 0;
-	while (i < 1)
-	{
-		printf("%s", get_next_line(k));
-		printf("%s", get_next_line(j));
-		i++;
-	}
-	close(k);
-	close(j);
-} */
+/*
+#include <stdio.h>
+ int        main()
+ {
+     char *line;
+     char *line1;
+     char *line2;
+     int fd1 = open("a.txt",O_RDONLY);
+     line = get_next_line(fd1);
+     line1 = get_next_line(fd1);
+     line2 = get_next_line(fd1);
+    printf("%s",line);
+    printf("%s",line1);
+    printf("%s",line2);
+    close(fd1);
+ }
+*/

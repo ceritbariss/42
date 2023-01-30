@@ -6,7 +6,7 @@
 /*   By: bcerit <bcerit@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 14:34:04 by bcerit            #+#    #+#             */
-/*   Updated: 2023/01/20 14:35:26 by bcerit           ###   ########.fr       */
+/*   Updated: 2023/01/30 13:28:38 by bcerit           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,22 +109,21 @@ char	*get_next_line(int fd)
 	return (NULL);
 }
 
-/* int	main(void)
-{
-	int	k;
-	int	j;
-	int	i;
-
-	k = open(".o", O_RDONLY);
-	j = open(".o_2", O_RDONLY);
-	i = 0;
-	while (i < 1)
-	{
-		printf("%s", get_next_line(k));
-		printf("%s", get_next_line(k));
-		printf("%s", get_next_line(j));
-		i++;
-	}
-	close(k);
-	close(j);
-} */
+/* int        main()
+ {
+     char *line;
+     int fd1 = open("b.txt",O_RDONLY);
+     int fd2 = open("a.txt",O_RDONLY);
+      line = get_next_line(fd1);
+     printf("%s\n",line);
+     char *line2 = get_next_line(fd2);
+     printf("%s\n",line2);
+        line = get_next_line(fd1);
+     printf("%s\n",line);
+        line2 = get_next_line(fd2);
+     printf("%s\n",line2);
+    // printf("%d\n",fd2);
+    // printf("%d\n",fd1);
+    close(fd1);
+ }
+*/
